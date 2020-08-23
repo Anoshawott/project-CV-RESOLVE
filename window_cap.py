@@ -1,8 +1,12 @@
 import numpy as np
 import win32gui, win32ui, win32con
+import cv2
+from hsvfilter import HsvFilter
 
 class WindowCapture:
     # Properties
+    TRACKBAR_WINDOW = "Trackbars"
+
     w = 0
     h = 0
     hwnd = None
