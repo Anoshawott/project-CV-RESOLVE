@@ -5,7 +5,7 @@ from window_cap import WindowCapture
 from vision_adjust import VisionAdjust
 from hsvfilter import HsvFilter
 
-wincap = WindowCapture('test')
+wincap = WindowCapture('VALORANT  ')
 selected_vision = VisionAdjust()
 new_vision = selected_vision.init_control_gui()
 
