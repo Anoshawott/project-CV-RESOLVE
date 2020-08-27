@@ -3,5 +3,7 @@
 	Prep:
 		- First set HSV filters
 		- crop function to only have image where crosshair meets object
-		- on-click save image to positive folder
+		- on-click save image to positive FOLDER
+		- Postives: 341; Negatives: 381
+
 3. TBD

@@ -21,7 +21,7 @@ loop_time = time()
 
 state_left = win32api.GetKeyState(0x01)
 state_right = win32api.GetKeyState(0x02)
-count = 502 
+count = 1271
 
 while(True):
 
@@ -37,6 +37,7 @@ while(True):
             screenshot = wincap.get_screenshot()
             crop_img = screenshot[y:y+height, x:x+width]
             output_image = selected_vision.apply_hsv_filter(crop_img, hsv_filter)
+            cv2.imwrite('images/positive/{}_r.jpg'.format(count), crop_img)
             cv2.imwrite('images/positive/{}.jpg'.format(count), output_image)
             print(count)
             count += 1
