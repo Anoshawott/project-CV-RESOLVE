@@ -21,7 +21,7 @@ loop_time = time()
 
 state_left = win32api.GetKeyState(0x01)
 state_right = win32api.GetKeyState(0x02)
-count = 2447
+count = 3861
 
 while(True):
 
