@@ -11,6 +11,8 @@ from vision_adjust import VisionAdjust
 from hsvfilter import HsvFilter
 from pynput.mouse import Button, Controller
 
+# Note: Neural Net reponse images placed after image 5380
+
 mouse = Controller()
 
 CATEGORIES = ['wait', 'shoot']
@@ -29,7 +31,7 @@ x = 898
 width = 104
 height = 169
 
-count=5394
+count=8058
 
 loop_time = time()
 
