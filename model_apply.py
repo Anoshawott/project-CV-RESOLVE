@@ -19,7 +19,7 @@ CATEGORIES = ['wait', 'shoot']
 
 # img=data_tools().data_img_read_test(filepath='images/just missed/3642.jpg')
 
-model=tf.keras.models.load_model('64x4-CNN_v1.model')
+model=tf.keras.models.load_model('32x4_v2-CNN.model')
 
 wincap = WindowCapture('VALORANT  ')
 selected_vision = VisionAdjust()

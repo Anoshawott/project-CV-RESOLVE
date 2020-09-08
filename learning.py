@@ -12,7 +12,8 @@ y=pickle.load(open("y.pickle", 'rb'))
 
 X=X/255.0
 
-# Best model is 0 dense layers, 32 nodes and 4 convolutional layers for 13 epochs
+# Best model is 0 dense layers, 32 nodes and 4 convolutional layers for 13 epochs 
+# NEED to fix! Apparently too complex to run...
 
 dense_layers=[0]
 layer_sizes=[32]
@@ -52,7 +53,7 @@ for dense_layer in dense_layers:
                             optimizer="adam",
                             metrics=['accuracy'])
 
-            model.fit(X,y,batch_size=24,epochs=13,validation_split=0.3,
+            model.fit(X,y,batch_size=32,epochs=9,validation_split=0.3,
                         callbacks=[tensorboard])
 
-model.save('64x4-CNN.model')
+model.save('32x4_v2-CNN.model')
