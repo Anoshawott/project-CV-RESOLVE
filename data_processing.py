@@ -7,7 +7,7 @@ import cv2
 
 class data_tools:
     def create_training_data(self, DATADIR='images', 
-    CATEGORIES=['negative/30_n', 'positive/All_Positives']):
+    CATEGORIES=['negative/new_negatives', 'positive/All_Positives']):
         training_data=[]
         for category in CATEGORIES:
             path=DATADIR+'/'+category # paths to respective images classes

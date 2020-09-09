@@ -16,7 +16,7 @@ X=X/255.0
 # NEED to fix! Apparently too complex to run...
 
 dense_layers=[0]
-layer_sizes=[32]
+layer_sizes=[64]
 conv_layers=[4]
 
 for dense_layer in dense_layers:
@@ -53,7 +53,7 @@ for dense_layer in dense_layers:
                             optimizer="adam",
                             metrics=['accuracy'])
 
-            model.fit(X,y,batch_size=32,epochs=9,validation_split=0.3,
+            model.fit(X,y,batch_size=18,epochs=10,validation_split=0.3,
                         callbacks=[tensorboard])
-
-model.save('32x4_v2-CNN.model')
+# Don't forget to change version number when training a new model!
+model.save('64x4_v3.2-CNN.model')

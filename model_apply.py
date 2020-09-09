@@ -19,7 +19,7 @@ CATEGORIES = ['wait', 'shoot']
 
 # img=data_tools().data_img_read_test(filepath='images/just missed/3642.jpg')
 
-model=tf.keras.models.load_model('32x4_v2-CNN.model')
+model=tf.keras.models.load_model('32x4_v3.2-CNN.model')
 
 wincap = WindowCapture('VALORANT  ')
 selected_vision = VisionAdjust()
@@ -31,7 +31,7 @@ x = 898
 width = 104
 height = 169
 
-count=9515
+count=10006
 
 loop_time = time()
 
@@ -44,10 +44,11 @@ while(True):
     response=CATEGORIES[int(prediction[0][0])]
     if response=='shoot':
         mouse.click(Button.left, 1)
-        cv2.imwrite('images/test/{}_r.jpg'.format(count), crop_img)
-        cv2.imwrite('images/test/{}.jpg'.format(count), output_image_og)
+        # cv2.imwrite('images/test/{}_r.jpg'.format(count), crop_img)
+        # cv2.imwrite('images/test/{}.jpg'.format(count), output_image_og)
         print(count)
         count+=1
+        sleep(0.0001)
     
     # print('FPS {}'.format(1 / (time() - loop_time)))
     # loop_time = time()
